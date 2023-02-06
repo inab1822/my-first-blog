@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inab1822's blog</title>
+</head>
+<body>
+    <div>
+        <h1><a href=''>Django inab1822 Blog</a></h1>
+    </div>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr}}</p> 
+            <!-- post의 text행이바뀌면 문단으로 변환하겠다. -->
+        </div>
+    {% endfor %}
+</body>
+</html>
